@@ -1,0 +1,15 @@
+<h1>Logowanie</h1>
+<form>
+  <div class="form-group">
+    <label>Email:</label>
+    <input type="text" class="form-control" [(ngModel)]="login.email" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>Hasło:</label>
+    <input type="text" class="form-control" [(ngModel)]="login.password" [ngModelOptions]="{standalone: true}">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="Login()">Zaloguj</button>
+  <div class="alert alert-danger mt-3" *ngIf="loginError">
+    {{ error }}
+  </div>
+</form>

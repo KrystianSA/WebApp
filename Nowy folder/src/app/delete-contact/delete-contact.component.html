@@ -1,0 +1,9 @@
+<h2>Usuń użytkownika</h2>
+<form (ngSubmit)="DeleteContact()">
+  <div class="form-group">
+    <label>Podaj Id kontaktu do usunięcia:</label>
+    <input type="text" class="form-control" [(ngModel)]="contactId" name="contactId">
+  </div>
+  <button type="submit" class="btn btn-danger">Usuń kontakt</button>
+  <h2 *ngIf="message">Dane zostały usunięte</h2>
+</form>

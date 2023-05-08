@@ -1,0 +1,26 @@
+<h1>Dodaj nowego użytkownika</h1>
+<form>
+  <div class="form-group">
+    <label>Imie:</label>
+    <input type="text" class="form-control" [(ngModel)]="contact.name" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>Nazwisko:</label>
+    <input type="text" class="form-control" [(ngModel)]="contact.surname" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>Email:</label>
+    <input type="text" class="form-control" [(ngModel)]="contact.email" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>Numer telefonu:</label>
+    <input type="text" class="form-control" [(ngModel)]="contact.phoneNumber" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>Kategoria : ( 1 - Prywatny ; 2 - Służbowy ; 3 - Inny)</label>
+    <input type="text" class="form-control" [(ngModel)]="contact.categoryId" [ngModelOptions]="{standalone: true}">
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="AddContact()">Dodaj użytkownika</button>
+  <h2 *ngIf="message">Dane zostały dodane</h2>
+</form>
