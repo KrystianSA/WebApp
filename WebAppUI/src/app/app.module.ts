@@ -15,6 +15,10 @@ import { UpdateContactComponent } from './update-contact/update-contact.componen
 import { CategoryComponent } from './category/category.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatButtonModule} from '@angular/material/button';
+import { StartingPageComponent } from './starting-page/starting-page.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,7 @@ import { LoginComponent } from './login/login.component';
     CategoryComponent,
     RegisterComponent,
     LoginComponent,
+    StartingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,10 @@ import { LoginComponent } from './login/login.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MatIconModule,
+    MatTooltipModule,
+    MatButtonModule
   ],
 
   providers: [

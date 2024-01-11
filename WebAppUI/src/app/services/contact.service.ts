@@ -15,7 +15,7 @@ export class ContactService {
     constructor(private http: HttpClient) { }
 
     public getContacts(): Observable<Contact[]> {
-        return this.http.get<Contact[]>(this.baseUrl+"contact");
+        return this.http.get<Contact[]>(this.baseUrl+"contacts");
     }
 
     public deleteContact(id: number): Observable<Contact[]> {
@@ -23,7 +23,7 @@ export class ContactService {
         const headers = new HttpHeaders({
           'Authorization': `Bearer ${token}`
         });
-        const url = `${this.baseUrl}contact/${id}`;
+        const url = `${this.baseUrl}contacts/${id}`;
         return this.http.delete<Contact[]>(url, { headers: headers });
       }
 
@@ -32,7 +32,7 @@ export class ContactService {
         const headers = new HttpHeaders({
           'Authorization': `Bearer ${token}`
         });
-        return this.http.post<Contact[]>(`${this.baseUrl+"contact"}`, user,{ headers: headers });
+        return this.http.post<Contact[]>(`${this.baseUrl+"contacts"}`, user,{ headers: headers });
     }
 
     public updateContact(updateUser:UpdateContact,id:number):Observable<UpdateContact[]>{
@@ -40,7 +40,7 @@ export class ContactService {
         const headers = new HttpHeaders({
           'Authorization': `Bearer ${token}`
         });
-        const url = `${this.baseUrl+"contact"}/${id}`;
+        const url = `${this.baseUrl+"contacts"}/${id}`;
         return this.http.put<UpdateContact[]>(url,updateUser,{ headers: headers });
     }
 }

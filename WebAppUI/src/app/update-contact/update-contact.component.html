@@ -1,8 +1,16 @@
 <h1>Update</h1>
 <form>
   <div class="form-group">
-    <label>Podaj Id kontaktu do zaktualizowania:</label>
+    <label>Id:</label>
     <input type="text" class="form-control" [(ngModel)]="contactId" name="userId">
+  </div>
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" class="form-control" [(ngModel)]="updateContact.name" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label>Surname:</label>
+    <input type="text" class="form-control" [(ngModel)]="updateContact.surname" [ngModelOptions]="{standalone: true}">
   </div>
   <div class="form-group">
     <label>Email:</label>
@@ -13,9 +21,9 @@
     <input type="text" class="form-control" [(ngModel)]="updateContact.phoneNumber" [ngModelOptions]="{standalone: true}">
   </div>
   <div class="form-group">
-    <label>Kategoria:</label>
+    <label>Category:</label>
     <input type="text" class="form-control" [(ngModel)]="updateContact.categoryId" [ngModelOptions]="{standalone: true}">
   </div>
-  <button type="submit" class="btn btn-primary" (click)="UpdateContact()">Zaktualizuj</button>
-  <h2 *ngIf="message">Dane zostały zaktualizowane</h2>
+  <button type="submit" class="btn btn-primary" (click)="UpdateContact()">Update</button>
+  <h2 *ngIf="message">Data have updated</h2>
 </form>

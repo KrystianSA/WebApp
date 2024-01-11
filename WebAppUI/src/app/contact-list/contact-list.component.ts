@@ -8,9 +8,9 @@ import { Contact } from '../models/Contact';
   styleUrls: ['./contact-list.component.css']
 })
 export class ContactListComponent implements OnInit {
-  contacts : Contact[] | undefined;
+  contacts: Contact[] | undefined;
 
-  constructor(private contactService: ContactService) {}
+  constructor(private contactService: ContactService) { }
 
   ngOnInit() {
     this.GetContacts();
@@ -19,13 +19,14 @@ export class ContactListComponent implements OnInit {
   GetContacts() {
     this.contactService.getContacts().subscribe((contacts: Contact[]) => {
       this.contacts = contacts;
-    },error => {
+    }, 
+    (error) => {
       console.error(error);
     });
-    
+
   }
 
-  showDetails(contact:Contact) {
+  showDetails(contact: Contact) {
     contact.showDetails = !contact.showDetails;
   }
 }
