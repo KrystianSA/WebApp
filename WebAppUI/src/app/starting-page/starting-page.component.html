@@ -1,0 +1,18 @@
+<div class="grid-container">
+    <div class="center-text" *ngIf="isBlockTextVisible">
+        <div *ngIf="isBlockTextVisible">
+            <h1 style="font-size:50px">Hello</h1>
+            <h1>Welcome to my side</h1>
+            <h1>Here you can practise CRUD operations</h1>
+            <h1>But first you need to be our user</h1>
+        </div>
+        <div (click)="isBlockTextVisible=false">
+            <button mat-fab extended color="warn" routerLink="/login">
+                Login
+            </button>
+            <button mat-fab extended color="warn" routerLink="/register">
+                Register
+            </button>
+        </div>
+    </div>
+</div>

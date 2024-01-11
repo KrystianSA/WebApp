@@ -11,6 +11,8 @@ export class UpdateContactComponent {
 
   contactId?: number;
   updateContact : UpdateContact = {
+    name:'',
+    surname:'',
     email:'',
     phoneNumber:0,
     categoryId:0

@@ -17,10 +17,13 @@ export class AddContactComponent {
     phoneNumber: 0,
     categoryId: 0
   };
+  
 
   message : string | undefined
 
-  constructor(private contactService: ContactService){}
+  constructor(private contactService: ContactService){
+    console.log(this.contact);
+  }
 
   AddContact(){
     this.contactService.addContact(this.contact).subscribe(()=>{

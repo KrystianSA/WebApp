@@ -1,5 +1,7 @@
-export interface UpdateContact{
-    email:string;
-    phoneNumber : number;
-    categoryId : number;
+export interface UpdateContact {
+    name: string;
+    surname: string;
+    email: string;
+    phoneNumber: number;
+    categoryId: number;
 }

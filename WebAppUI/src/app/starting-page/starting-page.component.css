@@ -1,0 +1,13 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto 100px;
+    text-align: center;
+}
+
+.center-text{
+    margin-top: 50px;
+}
+
+.router-item {
+    text-align: left;
+}

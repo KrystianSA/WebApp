@@ -15,40 +15,32 @@ export class LoginComponent {
     email: '',
     password: '',
   };
-  
-  invalidLogin : boolean=true;
-  isUserValid: boolean=true;
-  Message: string | undefined;
-  loginError : boolean = false;
-  error : string | undefined;
 
-  constructor(private accountService: AccountService, private router: Router){}
+  invalidLogin: boolean = true;
+  isUserValid: boolean = true;
+  Message: string | undefined;
+  loginError: boolean = false;
+  error: string | undefined;
+
+  constructor(private accountService: AccountService, private router: Router) { }
 
   jwtHelperService = new JwtHelperService();
 
-  Login(){
+  Login() {
     this.accountService.login(this.login).subscribe(
-      response => {
-      const token = (<any>response).token;
-      localStorage.setItem("jwt",token);
-      this.invalidLogin=false;
-      this.router.navigate(["/category"])
+      (response) => {
+        const token = (<any>response).token;
+        localStorage.setItem("jwt", token);
+        this.invalidLogin = false;
+        this.router.navigate(["/category"])
       },
-      error =>{
-        this.loginError=true;
-        this.error = 'Nieprawidłowe hasło lub login';
+      (error) => {
+        this.loginError = true;
+        this.error = 'Invalid login or password !';
       });
   }
-  
-  setToken(token:string){
-    localStorage.setItem("access_token",token);
 
+  setToken(token: string) {
+    localStorage.setItem("access_token", token);
   }
-
-  loadCurrentUser(){
-    const token = localStorage.getItem("acces_token");
-    const userInfo = token!=null ? this.jwtHelperService.decodeToken(token):null;
-  
-  console.log(userInfo)
-}
 }
