@@ -1,8 +1,8 @@
+
 <br/>
 <p align="center">
-    <img ![IMG_0398](https://github.com/KrystianSA/WebApp/assets/122701689/864605bd-29e3-45e9-86b8-7a29d9c719cc) alt="Logo" width="80" height="80">
+      <img src="https://github.com/KrystianSA/WebApp/assets/122701689/e9553b2c-e6d2-4b3d-a256-850597856693" width="150" height="150">
   </a>
-<br/>
 <p align="center">
   <h3 align="center">Web App</h3>
 
@@ -12,7 +12,6 @@
     <br/>
   </p>
 </p>
-
 ## Table Of Contents
 
 * [About the Project](#about-the-project)
@@ -23,8 +22,10 @@
 * [Acknowledgements](#acknowledgements)
 
 ## About The Project
-
-![WebAppGif](https://github.com/KrystianSA/WebApp/assets/122701689/7ced8a56-2eba-4af9-a6d0-d2929b5a3f41)
+<p align="center">
+      <img src="https://github.com/KrystianSA/WebApp/assets/122701689/7ced8a56-2eba-4af9-a6d0-d2929b5a3f41" width="auto" height="400">
+  </a>
+<p align="center">
 
 What's your find here :
 * CRUD operations
