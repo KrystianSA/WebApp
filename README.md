@@ -20,7 +20,7 @@
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
+![WebAppGif](https://github.com/KrystianSA/WebApp/assets/122701689/7ced8a56-2eba-4af9-a6d0-d2929b5a3f41)
 
 What's your find here :
 * CRUD operations
