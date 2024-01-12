@@ -1,5 +1,9 @@
 <br/>
 <p align="center">
+    <img ![IMG_0398](https://github.com/KrystianSA/WebApp/assets/122701689/864605bd-29e3-45e9-86b8-7a29d9c719cc) alt="Logo" width="80" height="80">
+  </a>
+<br/>
+<p align="center">
   <h3 align="center">Web App</h3>
 
   <p align="center">
